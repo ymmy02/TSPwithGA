@@ -9,7 +9,8 @@ from salesman import Salesman
 ###########
 def _insertion(route, rate=0.02):
   size = len(route)
-  for i in size:
+  tmp = route.copy()
+  for i in range(size):
     if random.random() < rate:
       tmp = np.delete(route, i)
       insert_point = random.randint(0, len(tmp))
